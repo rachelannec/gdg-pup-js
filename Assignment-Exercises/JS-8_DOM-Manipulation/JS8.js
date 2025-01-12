@@ -3,8 +3,8 @@
 document.addEventListener('DOMContentLoaded', (event) =>{
     
     event.preventDefault();
-    let addButton = document.getElementById('add-button');
-    let subtractButton = document.getElementById('subtract-button');
+    let addButton = document.getElementById('button-add');
+    let subtractButton = document.getElementById('button-subtract');
     let counterText = document.getElementById('counter-text');
 
     let counter = 0;
@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', (event) =>{
             counter--;
         }
         
-        console.log(counter.toString());
-        counterText.textContent = counter.toString();
+        console.log(counter.toString()); // to be logged in the console
+        counterText.textContent = counter.toString(); // to display on the screen
     }
 
-    addButton.addEventListener('click', addOrSubtract());   
-    subtractButton.addEventListener('click', addOrSubtract());    // console.log(addOrSubtract);
+    addButton.addEventListener('click', addOrSubtract);   
+    subtractButton.addEventListener('click', addOrSubtract);    // console.log(addOrSubtract);
     
 })
 
